@@ -1,4 +1,7 @@
 from prefect import flow, task
+from prefect.filesystems import GitHub
+
+github_block = GitHub.load("prefect-test")
 # from prefect.blocks.system import String
 
 # string_block = String.load("nba-champs")
@@ -22,3 +25,4 @@ def hello_world():
     
 if __name__ == "__main__":
    hello_world()
+    #  github_block
